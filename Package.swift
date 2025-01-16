@@ -5,7 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "CommonInterface_ios",
-    
+    platforms: [
+           .macOS(.v10_14), .iOS(.v13), .tvOS(.v13)
+       ],
     products: [
 
         .library(
@@ -23,7 +25,8 @@ let package = Package(
       
         .target(
             name: "CommonInterface_ios",
-            dependencies: ["SwiftyJSON","IPAPI"]
+            dependencies: ["SwiftyJSON","IPAPI"],
+            path: "Sources"
         )
 
     ]
