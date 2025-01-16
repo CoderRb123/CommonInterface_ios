@@ -4,15 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "CommonInterface_ios",
+    name: "MultiAdsInterface",
     platforms: [
            .macOS(.v10_14), .iOS(.v13), .tvOS(.v13)
        ],
     products: [
-
         .library(
-            name: "CommonInterface_ios",
-            targets: ["CommonInterface_ios"]),
+            name: "MultiAdsInterface",
+            targets: ["MultiAdsInterface"]),
     ],
     dependencies : [
         .package(name:"SwiftyJSON",url: "https://github.com/SwiftyJSON/SwiftyJSON.git", .upToNextMajor(from: "5.0.2")),
@@ -22,9 +21,8 @@ let package = Package(
         
     ],
     targets: [
-      
         .target(
-            name: "CommonInterface_ios",
+            name: "MultiAdsInterface",
             dependencies: ["SwiftyJSON","IPAPI"],
             path: "Sources"
         )
